@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: node-nodevfile-nodocker-rhtap-three-component-scenarios-rs4n
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: node-nodevfile-nodocker-rhtap-three-component-scenarios-rs4n
+    app.kubernetes.io/part-of: mc-three-scenarios
+  name: node-nodevfile-nodocker-rhtap-three-component-scenarios-rs4n
+spec:
+  ports:
+  - name: "3001"
+    port: 3001
+    targetPort: 3001
+  selector:
+    app.kubernetes.io/instance: node-nodevfile-nodocker-rhtap-three-component-scenarios-rs4n
+status:
+  loadBalancer: {}
